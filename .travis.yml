@@ -1,18 +1,25 @@
 ---
 dist: xenial
+
 language: ruby
+
 cache: bundler
+
 before_install:
   - bundle -v
   - rm -f Gemfile.lock
   - gem update --system $RUBYGEMS_VERSION
   - gem --version
   - bundle -v
+
 script:
   - 'bundle exec rake $CHECK'
+
 bundler_args: --without system_tests
+
 rvm:
   - 2.5.3
+
 stages:
   - static
   - spec
@@ -20,6 +27,7 @@ stages:
   -
     if: tag =~ ^v\d
     name: deploy
+
 matrix:
   fast_finish: true
   include:
@@ -37,9 +45,11 @@ matrix:
     -
       env: DEPLOY_TO_FORGE=yes
       stage: deploy
+
 branches:
   only:
     - master
     - /^v\d/
+
 notifications:
   email: false
