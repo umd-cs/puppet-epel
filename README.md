@@ -1,8 +1,6 @@
 # Configure EPEL (Extra Repository for Enterprise Linux)
 
-# Note
-
-This is the last release that will support anything before Puppet 4.
+This module if forked from https://github.com/stahnma/puppet-module-epel in order to release support for RHEL 8.
 
 # About
 This module basically just mimics the epel-release rpm. The same repos are
