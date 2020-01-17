@@ -11,7 +11,7 @@ describe 'epel' do
   let :facts do
     default_facts.merge(
       operatingsystemrelease:    '8.0.1905',
-      operatingsystemmajrelease: '8'
+      operatingsystemmajrelease: '8',
     )
   end
 
@@ -23,7 +23,7 @@ describe 'epel' do
       let :facts do
         default_facts.merge(
           operatingsystemrelease:    '8.0.1905',
-          operatingsystemmajrelease: '8'
+          operatingsystemmajrelease: '8',
         )
       end
 
@@ -38,7 +38,7 @@ describe 'epel' do
       context 'epel_baseurl => https://example.com/epel/8/x86_64' do
         let(:params) do
           {
-            epel_baseurl: 'https://example.com/epel/8/x86_64'
+            epel_baseurl: 'https://example.com/epel/8/x86_64',
           }
         end
 
@@ -49,7 +49,7 @@ describe 'epel' do
       context 'epel_mirrorlist => absent' do
         let(:params) do
           {
-            epel_mirrorlist: 'absent'
+            epel_mirrorlist: 'absent',
           }
         end
 
@@ -59,7 +59,7 @@ describe 'epel' do
       context 'operatingsystemmajrelease undef' do
         let :facts do
           default_facts.merge(
-            operatingsystemrelease: '8.0.1905'
+            operatingsystemrelease: '8.0.1905',
           )
         end
 
@@ -77,7 +77,7 @@ describe 'epel' do
       let :facts do
         default_facts.merge(
           operatingsystemrelease:    '7.0.1406',
-          operatingsystemmajrelease: '7'
+          operatingsystemmajrelease: '7',
         )
       end
 
@@ -92,7 +92,7 @@ describe 'epel' do
       context 'epel_baseurl => https://example.com/epel/7/x86_64' do
         let(:params) do
           {
-            epel_baseurl: 'https://example.com/epel/7/x86_64'
+            epel_baseurl: 'https://example.com/epel/7/x86_64',
           }
         end
 
@@ -103,7 +103,7 @@ describe 'epel' do
       context 'epel_mirrorlist => absent' do
         let(:params) do
           {
-            epel_mirrorlist: 'absent'
+            epel_mirrorlist: 'absent',
           }
         end
 
@@ -113,7 +113,7 @@ describe 'epel' do
       context 'operatingsystemmajrelease undef' do
         let :facts do
           default_facts.merge(
-            operatingsystemrelease: '7.0.1406'
+            operatingsystemrelease: '7.0.1406',
           )
         end
 
@@ -131,7 +131,7 @@ describe 'epel' do
       let :facts do
         default_facts.merge(
           operatingsystemrelease:    '6.4',
-          operatingsystemmajrelease: '6'
+          operatingsystemmajrelease: '6',
         )
       end
 
@@ -146,7 +146,7 @@ describe 'epel' do
       context 'epel_baseurl => https://example.com/epel/6/x86_64' do
         let(:params) do
           {
-            epel_baseurl: 'https://example.com/epel/6/x86_64'
+            epel_baseurl: 'https://example.com/epel/6/x86_64',
           }
         end
 
@@ -157,7 +157,7 @@ describe 'epel' do
       context 'epel_mirrorlist => absent' do
         let(:params) do
           {
-            epel_mirrorlist: 'absent'
+            epel_mirrorlist: 'absent',
           }
         end
 
@@ -167,7 +167,7 @@ describe 'epel' do
       context 'operatingsystemmajrelease undef' do
         let :facts do
           default_facts.merge(
-            operatingsystemrelease: '6.4'
+            operatingsystemrelease: '6.4',
           )
         end
 
@@ -185,7 +185,7 @@ describe 'epel' do
       let :facts do
         default_facts.merge(
           operatingsystemrelease:    '5.9',
-          operatingsystemmajrelease: '5'
+          operatingsystemmajrelease: '5',
         )
       end
 
@@ -203,7 +203,7 @@ describe 'epel' do
     let :facts do
       default_facts.merge(
         operatingsystem:        'Amazon',
-        operatingsystemrelease: 'Amazon'
+        operatingsystemrelease: 'Amazon',
       )
     end
 
@@ -216,7 +216,7 @@ describe 'epel' do
     it do
       is_expected.to contain_yumrepo('epel').with(
         enabled:  '1',
-        gpgcheck: '1'
+        gpgcheck: '1',
       )
     end
   end
