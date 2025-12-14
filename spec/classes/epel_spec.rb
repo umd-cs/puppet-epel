@@ -14,7 +14,7 @@ describe 'epel' do
     supported_os: [
       {
         'operatingsystem' => 'RedHat',
-        'operatingsystemrelease' => %w[7 8 9]
+        'operatingsystemrelease' => %w[7 8 9 10]
       }
     ]
   }
